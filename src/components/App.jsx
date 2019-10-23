@@ -1,9 +1,10 @@
 import React from "react";
+import { Header } from "semantic-ui-react";
 
 const App = () => {
   return (
     <div>
-      <h1>Hey this is App</h1>
+      <Header as="h1">Hey this is App</Header>
     </div>
   );
 };

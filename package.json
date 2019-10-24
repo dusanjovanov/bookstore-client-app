@@ -8,9 +8,13 @@
     "dev": "parcel index.html"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
     "@typescript-eslint/eslint-plugin": "2.x",
     "@typescript-eslint/parser": "2.x",
     "babel-eslint": "10.x",
+    "babel-plugin-styled-components": "^1.10.6",
     "eslint": "6.x",
     "eslint-config-prettier": "^6.4.0",
     "eslint-config-react-app": "^5.0.2",
@@ -26,6 +30,7 @@
   "dependencies": {
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "semantic-ui-react": "^0.88.1"
+    "semantic-ui-react": "^0.88.1",
+    "styled-components": "^4.4.0"
   }
 }

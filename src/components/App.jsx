@@ -1,17 +1,38 @@
 import React from "react";
-import { Container, Grid } from "semantic-ui-react";
+import { Container, Grid, GridColumn } from "semantic-ui-react";
 import { createGlobalStyle, css } from "styled-components";
 import Footer from "./Footer";
 import SiteHeader from "./Header";
-import Main from "./Main";
+import Home from "../pages/Home";
 import Side from "./Side";
+import { Router } from "@reach/router";
+import Book from "../pages/Book";
+import Search from "./Search";
 
 const App = () => {
   return (
     <Container>
       <SiteHeader />
-      <Grid className="mt3">
-        <Main />
+      <Grid
+        css={`
+          &&& {
+            margin-top: 20px;
+          }
+        `}
+      >
+        <GridColumn
+          mobile={16}
+          tablet={10}
+          computer={12}
+          as="main"
+          style={{ paddingTop: 0 }}
+        >
+          <Search />
+          <Router>
+            <Home path="/" />
+            <Book path="/book/:id" />
+          </Router>
+        </GridColumn>
         <Side />
       </Grid>
       <Footer />

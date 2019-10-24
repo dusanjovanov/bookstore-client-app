@@ -2,10 +2,11 @@ import React from "react";
 import { List, ListHeader } from "semantic-ui-react";
 import styled from "styled-components";
 import { onImageError } from "../util";
+import { Link } from "@reach/router";
 
 const TopListItem = () => {
   return (
-    <List.Item>
+    <List.Item as={Link} to="/book/1">
       <MyImage
         className="ui image"
         src={`https://picsum.photos/seed/${Math.random()}/200/250`}

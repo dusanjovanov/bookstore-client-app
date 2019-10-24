@@ -9,6 +9,12 @@ const Search = () => {
       size="large"
       fluid
       placeholder="Search for books and authors"
+      className="mb3"
+      css={`
+        &&& input {
+          border-color: #aaa;
+        }
+      `}
     />
   );
 };

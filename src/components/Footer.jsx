@@ -74,7 +74,7 @@ const Footer = () => {
         </List>
       </Flex>
       <div
-        className="mt2"
+        className="mt4"
         css={`
           text-align: center;
         `}

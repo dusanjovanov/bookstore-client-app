@@ -1,13 +1,22 @@
 import React from "react";
-import { Grid, Header } from "semantic-ui-react";
+import { GridColumn, Header } from "semantic-ui-react";
 import TopList from "./TopList";
 
 const Side = () => {
   return (
-    <Grid.Column mobile={16} tablet={6} computer={4} as="aside">
+    <GridColumn
+      mobile={16}
+      tablet={6}
+      computer={4}
+      as="aside"
+      css={`
+        border-left: 1px solid #ccc;
+        padding-bottom: 20px;
+      `}
+    >
       <Header as="h2">Top list</Header>
       <TopList />
-    </Grid.Column>
+    </GridColumn>
   );
 };
 

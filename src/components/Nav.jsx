@@ -67,7 +67,7 @@ const MyIcon = styled.i`
 `;
 
 const Link = styled.a`
-  font-size: 1.7em;
+  font-size: 1.5em;
   cursor: pointer;
   &:hover {
     border-bottom: 2px solid #000;
@@ -77,6 +77,7 @@ const Link = styled.a`
 const MenuItem = styled.li`
   display: inline-block;
   position: relative;
+  padding-bottom: 7px;
   &:hover {
     & > ${Dropdown} {
       display: block;

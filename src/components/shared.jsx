@@ -11,6 +11,6 @@ export const Logo = ({ ...props }) => {
 };
 
 const Root = styled.h1`
-  font-size: 3em;
+  font-size: 2.5em;
   margin: 0;
 `;

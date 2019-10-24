@@ -17,7 +17,7 @@ const Footer = () => {
   return (
     <Root>
       <Flex>
-        <Logo className="mr3" />
+        <Logo />
         <div
           css={`
             display: flex;
@@ -41,7 +41,6 @@ const Footer = () => {
           </List>
           <List
             size="large"
-            className="mr5"
             css={`
               &&& {
                 margin-bottom: 1em;
@@ -59,7 +58,7 @@ const Footer = () => {
           size="large"
           css={`
             &&& {
-              margin-left: 50px;
+              margin-right: 30px;
             }
           `}
         >
@@ -96,6 +95,7 @@ const Flex = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
 `;
 
 const Link = styled.span`

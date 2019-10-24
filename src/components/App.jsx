@@ -8,6 +8,7 @@ import Side from "./Side";
 import { Router } from "@reach/router";
 import Book from "../pages/Book";
 import Search from "./Search";
+import Author from "../pages/Author";
 
 const App = () => {
   return (
@@ -16,7 +17,7 @@ const App = () => {
       <Grid
         css={`
           &&& {
-            margin-top: 20px;
+            margin: 20px 0;
           }
         `}
       >
@@ -31,6 +32,7 @@ const App = () => {
           <Router>
             <Home path="/" />
             <Book path="/book/:id" />
+            <Author path="/author/:id" />
           </Router>
         </GridColumn>
         <Side />
@@ -61,12 +63,12 @@ const GlobalStyle = createGlobalStyle`
   ul{
     list-style-type: none;
   }
-  ${[0.25, 0.5, 1, 1.5, 3].map(
+  ${[5, 10, 15, 20, 25, 30].map(
     (size, sizeIdx) => css`
       ${["top", "right", "bottom", "left"].map(
         side => css`
           .${`m${side[0]}${sizeIdx + 1}`} {
-            ${`margin-${side}`}: ${size}em !important;
+            ${`margin-${side}`}: ${size}px !important;
           }
         `
       )}

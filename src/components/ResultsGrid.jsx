@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from "semantic-ui-react";
+import { Grid, GridColumn } from "semantic-ui-react";
 import ResultItem from "./ResultItem";
 
 const ResultsGrid = () => {
@@ -8,7 +8,9 @@ const ResultsGrid = () => {
       {Array(15)
         .fill(0)
         .map((_, idx) => (
-          <ResultItem key={idx} />
+          <GridColumn key={idx} tablet={8} computer={Math.floor(16 / 5)}>
+            <ResultItem />
+          </GridColumn>
         ))}
     </Grid>
   );

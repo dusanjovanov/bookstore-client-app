@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Icon, Image, Grid, GridColumn } from "semantic-ui-react";
+import { Link } from "@reach/router";
 
 const Book = () => {
   return (
@@ -9,23 +10,16 @@ const Book = () => {
           src={`https://picsum.photos/300/450`}
           css={`
             width: 100%;
+            max-height: 450px;
             min-width: 300px;
             object-fit: cover;
           `}
         />
       </GridColumn>
-      <GridColumn
-        mobile={16}
-        tablet={16}
-        computer={9}
-        css={`
-          padding: 0 20px;
-        `}
-      >
+      <GridColumn mobile={16} tablet={16} computer={9}>
         <h1
           css={`
             margin: 0;
-            // text-align: right;
           `}
         >
           Where no eagles fly
@@ -35,13 +29,19 @@ const Book = () => {
             margin: 0;
             font-size: 1.6em;
             color: #555;
-            // text-align: right;
           `}
           className="mb2"
         >
-          Julian Casablancas
+          <Link
+            to="/author/1"
+            css={`
+              color: #555;
+            `}
+          >
+            Julian Casablancas
+          </Link>
         </h2>
-        <p>
+        <div className="mb2">
           One morning, when Gregor Samsa woke from troubled dreams, he found
           himself transformed in his bed into a horrible vermin. He lay on his
           armour-like back, and if he lifted his head a little he could see his
@@ -52,13 +52,13 @@ const Book = () => {
           to me?" he thought. It wasn't a dream. His room, a proper human room
           although a little too small, lay peacefully between its four familiar
           walls.
-        </p>
-        <p>
+        </div>
+        <div className="mb1">
           <strong>Publish date: </strong>20.10.1963.
-        </p>
-        <p>
+        </div>
+        <div className="mb3">
           <strong>Cover: </strong>paperback
-        </p>
+        </div>
 
         <div>
           <strong

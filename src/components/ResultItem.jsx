@@ -1,12 +1,11 @@
+import { Link } from "@reach/router";
 import React from "react";
-import { GridColumn } from "semantic-ui-react";
 import styled from "styled-components";
 import { onImageError } from "../util";
-import { Link } from "@reach/router";
 
-const ResultItem = () => {
+const ResultItem = ({ showAuthor = true }) => {
   return (
-    <GridColumn tablet={8} computer={Math.floor(16 / 5)} as={Root}>
+    <Root>
       <Link to="/book/1">
         <div>
           <Image
@@ -24,10 +23,10 @@ const ResultItem = () => {
           >
             <strong>Title</strong>
           </p>
-          <p>Author</p>
+          {showAuthor && <p>Author</p>}
         </div>
       </Link>
-    </GridColumn>
+    </Root>
   );
 };
 

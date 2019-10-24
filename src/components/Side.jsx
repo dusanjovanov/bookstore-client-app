@@ -11,7 +11,6 @@ const Side = () => {
       as="aside"
       css={`
         border-left: 1px solid #ccc;
-        padding-bottom: 20px;
       `}
     >
       <Header as="h2">Top list</Header>

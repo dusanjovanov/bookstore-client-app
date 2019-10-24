@@ -9,7 +9,7 @@ const Search = () => {
       size="large"
       fluid
       placeholder="Search for books and authors"
-      className="mb3"
+      className="mb4"
       css={`
         &&& input {
           border-color: #aaa;
